@@ -25,7 +25,7 @@ namespace Core.Ui.Controllers
             return View(await _context.Pessoas.ToListAsync());
         }
 
-        // GET: PessoaEntidades/Details/5
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -49,12 +49,10 @@ namespace Core.Ui.Controllers
             return View();
         }
 
-        // POST: PessoaEntidades/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome,Cpf,Email,UserName,Senha,Id,Status,Dt_Criacao")] PessoaEntidade pessoaEntidade)
+        public async Task<IActionResult> Create([Bind("Nome,Cpf,Email,UserName,Senha,Id")] PessoaEntidade pessoaEntidade)
         {
             if (ModelState.IsValid)
             {
@@ -81,9 +79,7 @@ namespace Core.Ui.Controllers
             return View(pessoaEntidade);
         }
 
-        // POST: PessoaEntidades/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Nome,Cpf,Email,UserName,Senha,Id,Status,Dt_Criacao")] PessoaEntidade pessoaEntidade)
@@ -116,7 +112,6 @@ namespace Core.Ui.Controllers
             return View(pessoaEntidade);
         }
 
-        // GET: PessoaEntidades/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +129,7 @@ namespace Core.Ui.Controllers
             return View(pessoaEntidade);
         }
 
-        // POST: PessoaEntidades/Delete/5
+       
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

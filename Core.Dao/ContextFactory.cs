@@ -12,7 +12,8 @@ namespace Core.Dao
         {
             if (Context == null)
             {
-               // Context = new DataBaseContext();
+                //dbcontxt options
+               // Context = new Contexto();
             }
             return Context;
         }

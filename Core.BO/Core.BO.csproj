@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Commons\Core.Commons.csproj" />
+    <ProjectReference Include="..\Core.Dao\Core.Dao.csproj" />
+    <ProjectReference Include="..\Core.Entities\Core.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
