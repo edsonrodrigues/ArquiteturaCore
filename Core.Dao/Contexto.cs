@@ -10,6 +10,8 @@ namespace Core.Dao
     public class Contexto :  IdentityDbContext
     {
         public DbSet<PessoaEntidade> Pessoas { get; set; }
+
+        public DbSet<User> Users { get; set; }
         public Contexto(DbContextOptions<Contexto> opcoes) : base(opcoes)
         {
 
