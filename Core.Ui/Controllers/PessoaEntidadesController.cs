@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Core.Dao;
 using Core.Entities.Entidade;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Core.Ui.Controllers
 {
@@ -20,6 +21,7 @@ namespace Core.Ui.Controllers
         }
 
         // GET: PessoaEntidades
+      
         public async Task<IActionResult> Index()
         {
             return View(await _context.Pessoas.ToListAsync());
