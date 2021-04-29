@@ -73,6 +73,7 @@ namespace Core.Api
                     .RequireAuthenticatedUser().Build());
             }
             );
+  
 
             services.AddDbContext<Contexto>(options =>
                options.UseSqlServer(
@@ -93,6 +94,11 @@ namespace Core.Api
             services.AddTransient<ITokenService, TokenService>();
             services.AddScoped<IUserRepository, UserRepository>();
 
+
+        }
+
+        public void methodotesteSonar()
+        {
 
         }
 
