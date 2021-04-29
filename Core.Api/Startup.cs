@@ -50,6 +50,7 @@ namespace Core.Api
                 {
                     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                    //options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 }
 
                 ).AddJwtBearer(options =>
@@ -72,6 +73,7 @@ namespace Core.Api
                     .RequireAuthenticatedUser().Build());
             }
             );
+  
 
             services.AddDbContext<Contexto>(options =>
                options.UseSqlServer(
@@ -92,6 +94,11 @@ namespace Core.Api
             services.AddTransient<ITokenService, TokenService>();
             services.AddScoped<IUserRepository, UserRepository>();
 
+
+        }
+
+        public void methodotesteSonar()
+        {
 
         }
 
